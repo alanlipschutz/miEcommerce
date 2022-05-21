@@ -5,11 +5,14 @@ import Header from "./components/Header";
 import HomeScreen from "./pages/HomeScreen";
 import ProductScreen from "./pages/ProductScreen";
 import { Route, Routes } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store.js";
+
 import "./App.css";
 
 function App() {
   return (
-    <div>
+    <Provider store={store}>
       <Header />
       <main className="py-3">
         <Container>
@@ -20,7 +23,7 @@ function App() {
         </Container>
       </main>
       <Footer />
-    </div>
+    </Provider>
   );
 }
 
