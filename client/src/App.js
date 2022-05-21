@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HomeScreen from "./pages/HomeScreen";
 import ProductScreen from "./pages/ProductScreen";
+import CartScreen from "./pages/CartScreen";
 import { Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store.js";
