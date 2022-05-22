@@ -7,9 +7,9 @@ import { listProductDetails } from "../actions/productActions.js";
 import Loader from "../components/Loader.js";
 import Message from "../components/Message.js";
 import { Form } from "react-bootstrap";
-const ProductScreen = ({ history }) => {
+const ProductScreen = () => {
   const navigate = useNavigate();
-  const [qty, setQty] = useState(0);
+  const [qty, setQty] = useState(1);
   const { id } = useParams();
   const dispatch = useDispatch();
   const productDetails = useSelector((state) => state.productDetails);
