@@ -13,4 +13,14 @@ async function getProduct(id) {
   const response = await api.get(`/products/${id}`);
   return response.data;
 }
-export { getProducts, getProduct };
+
+async function logIn(email, password) {
+  const response = await api.post("/users/login", { email, password });
+  return response.data;
+}
+
+async function registerUser(name, email, password) {
+  const response = await api.post("/users", { name, email, password });
+  return response.data;
+}
+export { getProducts, getProduct, logIn, registerUser };

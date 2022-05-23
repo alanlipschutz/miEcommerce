@@ -10,6 +10,9 @@ import { Provider } from "react-redux";
 import store from "./store.js";
 
 import "./App.css";
+import LoginScreen from "./pages/LoginScreen";
+import RegisterScreen from "./pages/RegisterScreen";
+import ProfileScreen from "./pages/ProfileScreen";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
         <Container>
           <Routes>
             <Route path="/" element={<HomeScreen />} />
+            <Route path="/login" element={<LoginScreen />} />
+            <Route path="/profile" element={<ProfileScreen />} />
+            <Route path="/register" element={<RegisterScreen />} />
             <Route path="/product/:id" element={<ProductScreen />} />
             <Route path="/cart/:id" element={<CartScreen />} />
             <Route path="/cart/" element={<CartScreen />} />
